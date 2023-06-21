@@ -1,0 +1,170 @@
+.Header{
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: white;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(229, 228, 228);
+    
+
+    z-index: 100; /*help appear on top against poisiton*/
+}
+
+.left-section{
+    align-items: center;
+    display: flex;
+}
+
+.Hamburger{
+    height: 20px;
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+.Logo{
+    height: 24px;
+}
+.middle-section{
+    flex: 1;
+    margin-left: 70px;
+    margin-right: 35px;
+    max-width: 600px;
+    align-items: center;
+    display: flex;
+}
+
+.search-bar{
+    flex: 1;
+    height: 36px;
+    padding-left: 10px;
+    font-size: 16px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(189, 188, 188);
+    width: 0;
+    border-radius: 2px;
+    position: relative;
+    box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05) /*inset = inside*/
+}
+
+.search-bar::placeholder{ /*targetting placeholder*/
+    font-family: Roboto, Arial;
+    font-size: 16px;
+}
+
+.SearchButton{
+    width: 66px;
+    height: 40px;
+    background-color: rgb(240, 238, 238);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(189, 188, 188);
+    margin-left: -1px;
+    margin-right: 10px;
+    
+}
+.SearchButtonicon{
+    height: 25px;
+    margin-top: 5px;
+}
+.SearchButton .tooltip,
+.VoiceSearch .tooltip,
+.create-container .tooltip,
+.Appsicon .tooltip,
+.notificationsicon .tooltip{ /*target all tooltip*/
+    position: absolute;
+    background-color: gray;
+    color: white;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 2px;
+    font-size: 12px;
+    bottom: -30px;
+    opacity: 0;
+    transition: opacity .15s;
+    white-space: nowrap; /*prevent words from jumbing up*/
+    pointer-events: none;/*when mouse hover over tooltip, wont appear*/
+}
+.SearchButton:hover .tooltip,
+.VoiceSearch:hover .tooltip,
+.Appsicon:hover .tooltip,
+.create-container:hover .tooltip,
+.notificationsicon:hover .tooltip{
+    opacity: 1;
+}
+.VoiceSearch{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(245, 242, 242);
+}
+
+.VoiceSearch,
+.VoiceSearchicon,
+.create-container,
+.Appsicon,
+.notificationsicon{
+    position: relative;
+    justify-content: center;
+    display: flex;
+}
+
+.VoiceSearchicon{
+    height: 24px;
+    margin-top: 4px;
+}
+
+.right-section{ 
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-right: 20px;
+    flex-shrink: 0; /*prevent shrinking*/
+}
+
+.Upload{
+    height: 24px;
+}
+.Apps{
+    height: 24px;
+}
+.Notifications{
+    height: 24px;
+}
+
+.Notificationsicon{
+    position: relative;
+}
+
+.Notificationscount{
+    position: absolute;
+    top: -5px;
+    right: 0px;
+    background-color: red;
+    color: white;
+    font-family: roboto,Arial;
+    font-size: 11px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 10px;
+}
+
+.Profile{
+    height: 32px;
+    width: 32;
+    border-radius: 16px;
+    object-fit: cover;
+}
